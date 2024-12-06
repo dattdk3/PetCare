@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PetCase"
+        tools:targetApi="31">
+        <activity
+            android:name=".AddInforActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputDataSensor"
+            android:exported="false" />
+        <activity
+            android:name=".LightSensorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditHealthRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectPet"
+            android:exported="false" />
+        <activity
+            android:name=".AddHealthRecord"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".HomeActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".AddPetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditPetActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="true" />
+
+        <activity
+            android:name=".EditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CRUDUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

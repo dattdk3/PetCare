@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".PetFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="YourPet"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Button Section -->
+        <Button
+            android:id="@+id/AddPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#64B5F6"
+            android:textColor="#FFFFFF"
+            android:text="Add Pet"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="2dp"
+            android:padding="12dp" />
+
+        <!-- RecyclerView Section -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
